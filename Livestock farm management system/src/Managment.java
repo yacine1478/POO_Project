@@ -20,7 +20,7 @@ public class Managment {
         System.out.println("*****************");
         System.out.println("5. Mannage the History of buy and sell");
         System.out.println("*****************");
-        System.out.println("Tracking Of Animal");
+        System.out.println("6.Tracking Of Animal");
         System.out.println("*****************");
         System.out.println("exit");
         System.out.println("*****************");
