@@ -5,9 +5,9 @@ class StorageManager {
     private HashMap<Integer, Storage> storages;
     private Scanner scanner;
 
-    public StorageManager() {
+    public StorageManager(Scanner scanner) {
         storages = new HashMap<>();
-        scanner = new Scanner(System.in);
+        this.scanner = scanner;
     }
 
     // Add new storage

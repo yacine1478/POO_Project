@@ -4,9 +4,9 @@ class WorkerManager {
     private HashMap<Integer, Worker> workers;
     private Scanner scanner;
 
-    public WorkerManager() {
+    public WorkerManager(Scanner scanner) {
         workers = new HashMap<>();
-        scanner = new Scanner(System.in);
+        this.scanner = scanner;
     }
 
     // Add worker
