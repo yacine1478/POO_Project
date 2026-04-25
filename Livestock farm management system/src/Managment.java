@@ -5,12 +5,14 @@ public class Managment {
     private static WorkerManager workerManager;
     private static StorageManager storageManager;
     private static GestionVisites gestionVisites;
+    private static TransactionManager transactionManager;
 
     public static void managment(){
         scanner = new Scanner(System.in);
         workerManager = new WorkerManager(scanner);
         storageManager = new StorageManager(scanner);
         gestionVisites = new GestionVisites(scanner);
+        transactionManager = new TransactionManager(scanner);
         Main animalManager = new Main(scanner);
         int choice;
         boolean isRunning = true ;
@@ -26,20 +28,17 @@ public class Managment {
         System.out.println("*****************");
         System.out.println("5. Manage the History of buy and sell");
         System.out.println("*****************");
-        System.out.println("6. Tracking Of Animal");
-        System.out.println("*****************");
         System.out.println("7. Exit");
         System.out.println("*****************");
-        System.out.printf("- enter your choice (1-7) - ");
+        System.out.printf("- enter your choice (1-6) - ");
         choice = scanner.nextInt();
         switch (choice) {
             case 1 -> workerManager.manageWorkers();
             case 2 -> storageManager.manageStorages();
             case 3 -> manageVeterinaryVisits();
             case 4 -> animalManager.run();
-            case 5 -> System.out.println("Manage the History of buy and sell");
-            case 6 -> System.out.println("Tracking Of Animal");
-            case 7 -> isRunning = false;
+            case 5 -> transactionManager.manageTransactions();
+            case 6 -> isRunning = false;
             default -> System.out.println("invalid choice");
 
 
